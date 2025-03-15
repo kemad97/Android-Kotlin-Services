@@ -60,16 +60,12 @@ class DownloadIntentService : IntentService("DownloadIntentService") {
             Log.i(TAG, "downloadImage: success ")
             BitmapFactory.decodeStream(inputStream, null, options)
 
-
         }catch (e: Exception) {
             e.printStackTrace()
             Log.i(TAG, "downloadImage: fail ")
 
             null
         }
-
-        
-
     }
 
 
@@ -81,20 +77,6 @@ class DownloadIntentService : IntentService("DownloadIntentService") {
         sendBroadcast(intent)
     }
 
-
-
-//    private fun saveImage(input: InputStream, file: File) {
-//        val output = FileOutputStream(file)
-//        try {
-//            try {
-//                input.copyTo(output)
-//            } finally {
-//                input.close()
-//            }
-//        } finally {
-//            output.close()
-//        }
-//    }
 
 }
 
